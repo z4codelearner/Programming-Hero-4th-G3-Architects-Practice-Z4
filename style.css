@@ -26,7 +26,7 @@ img {
   font-size: 16px;
   font-weight: 500;
 }
-main {
+main, footer {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -194,11 +194,92 @@ padding: 20px 0px;
     display: block;
     text-align: center;
 }
+.section-header{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.facts-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #131313;
+    padding-left: 20px;
+    border-left: #ff900e 5px solid;
+}
+.facts-description{
+    font-size: 16px;
+    color: #727272;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+}
+.fact{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #ff900e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.fact:hover{
+    transform: translateY(-10px);    
+}
+.fact-number{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff900e;
+    margin: 10px 0;
+}
+.fact-description{
+    font-size: 16px;
+    color: #131313;
+}
+.sponsors-header{
+    width: 540px;
+    margin: 30px auto;
+    text-align: center;
+}
+.sponsors-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #131313;
+    margin-bottom: 20px;
+
+}
+.sponsors-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+.sponsors-company img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.sponsors-company img:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
 
 
 
-
-
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f890073a;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
 
 
@@ -268,6 +349,23 @@ padding: 20px 0px;
         margin-left: 0;
     }
     .features-section{
-    gap: 50px;
-}
+        gap: 50px;
+    }
+    .section-header{
+        width: 100%;
+    }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .sponsors-header{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .sponsors-company{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 30px;
+        margin-top: 50px;
+    }
 }
